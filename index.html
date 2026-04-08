@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Henna by Hiral — Calgary Henna Artist</title>
+  <meta name="description" content="Bridal henna, party henna, and custom mehndi designs in Calgary. Pricing depends on design. Message for a quote." />
+
+  <meta property="og:title" content="Henna by Hiral — Calgary Henna Artist" />
+  <meta property="og:description" content="Bridal · Parties · Custom designs. Pricing depends on design. Message for a quote." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="og-image.png" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#fff7ed;
+      --card:#ffffff;
+      --stroke:rgba(15,23,42,.10);
+      --text:rgba(15,23,42,.92);
+      --muted:rgba(15,23,42,.70);
+      --muted2:rgba(15,23,42,.55);
+      --accent:#ec4899;  /* rose */
+      --accent2:#f97316; /* orange */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 18% -10%, rgba(236,72,153,.18), transparent 60%),
+        radial-gradient(900px 600px at 88% 5%, rgba(249,115,22,.14), transparent 55%),
+        radial-gradient(1000px 700px at 50% 115%, rgba(236,72,153,.10), transparent 60%),
+        var(--bg);
+    }
+    a{color:inherit}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+
+    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(to bottom, rgba(255,247,237,.92), rgba(255,247,237,.62) 60%, transparent);backdrop-filter: blur(10px);
+      display:flex;flex-direction:column;gap:10px;padding:16px 0}
+    .brand{text-decoration:none;text-align:center}
+    .brand b{display:block;font-weight:950;letter-spacing:-.05em;font-size:1.1rem}
+    .brand span{display:block;margin-top:4px;color:var(--muted2);font-size:.8rem}
+    .navActions{display:flex;justify-content:space-between;gap:10px}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:12px 16px;border-radius:14px;border:1px solid var(--stroke);text-decoration:none;font-weight:900}
+    .btn.primary{background:linear-gradient(135deg, rgba(236,72,153,.98), rgba(249,115,22,.92));border-color:rgba(236,72,153,.25);color:#140b04;box-shadow:0 18px 70px rgba(236,72,153,.16)}
+    .btn.ghost{background:rgba(255,255,255,.65)}
+
+    .hero{padding:34px 0 18px}
+    .heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    @media(max-width:900px){.heroGrid{grid-template-columns:1fr}}
+
+    .card{background:rgba(255,255,255,.92);border:1px solid rgba(15,23,42,.10);border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(15,23,42,.06)}
+    .heroImg{width:100%;height:auto;border-radius:16px;border:1px solid rgba(15,23,42,.10);box-shadow:0 14px 40px rgba(15,23,42,.10)}
+
+    .pill{display:inline-flex;gap:.5rem;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid rgba(236,72,153,.25);background:rgba(236,72,153,.10);color:rgba(15,23,42,.85);font-weight:900;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    h1{margin:14px 0 10px;font-size:clamp(2.1rem,5vw,3.2rem);letter-spacing:-.06em;line-height:1.05}
+    .sub{margin:0;color:var(--muted);line-height:1.7;font-size:1.02rem}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    @media(max-width:980px){.grid3{grid-template-columns:1fr 1fr}}
+    @media(max-width:700px){.grid3{grid-template-columns:1fr}}
+
+    .section{padding:42px 0}
+    .section h2{margin:0 0 10px;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.04em}
+    .small{margin:0;color:var(--muted2);line-height:1.7}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+    @media(max-width:900px){.gallery{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.gallery{grid-template-columns:1fr}}
+    .gImg{width:100%;height:auto;border-radius:16px;border:1px solid rgba(15,23,42,.10);background:#fff}
+
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+    .footer{padding:30px 0 40px;color:var(--muted2)}
+    .footRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(15,23,42,.10);padding-top:16px}
+
+    @media(max-width:520px){
+      .brand span{display:none}
+      .navActions{width:100%}
+      .navActions .btn{flex:1}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#top"><b>Henna by Hiral</b><span>Calgary • Bridal • Parties • Custom designs</span></a>
+      <div class="navActions">
+        <a class="btn ghost" id="navGallery" href="#gallery">Gallery</a>
+        <a class="btn primary" href="https://www.facebook.com/share/1Fkowwxo68/?mibextid=wwXIfr" target="_blank" rel="noopener">Order on Facebook</a>
+      </div>
+    </div>
+
+    <section id="top" class="hero reveal">
+      <div class="heroGrid">
+        <div class="card" style="display:grid;gap:14px">
+          <img class="heroImg" src="hero.png" alt="Bridal henna design" loading="eager" />
+          <span class="pill">Bespoke mehndi • Calgary</span>
+          <h1>Elegant henna that looks incredible in photos.</h1>
+          <p class="sub">Bridal henna, party henna, and custom designs. Pricing depends on the design and timing. Message for a quote.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+            <a class="btn primary" href="https://www.facebook.com/share/1Fkowwxo68/?mibextid=wwXIfr" target="_blank" rel="noopener">Get a quote</a>
+            <a class="btn ghost" href="https://www.instagram.com/henna_by_hiral?utm_source=qr" target="_blank" rel="noopener">View Instagram</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px;letter-spacing:-.02em">Services</h3>
+          <p class="small">Choose a vibe, send inspiration, and we will tailor the design.</p>
+          <div class="grid3">
+            <div class="card" style="box-shadow:none;background:rgba(255,255,255,.75)">
+              <b>Bridal henna</b><div class="small" style="margin-top:6px">Full sets, detailed work, photo-ready.</div>
+            </div>
+            <div class="card" style="box-shadow:none;background:rgba(255,255,255,.75)">
+              <b>Party henna</b><div class="small" style="margin-top:6px">Quick designs for events and groups.</div>
+            </div>
+            <div class="card" style="box-shadow:none;background:rgba(255,255,255,.75)">
+              <b>Custom designs</b><div class="small" style="margin-top:6px">Bring inspo, we make it yours.</div>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(15,23,42,.10)">
+            <b>Pricing</b>
+            <div class="small" style="margin-top:6px">Pricing depends on the design and timing. Call for a quote.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section reveal">
+      <h2>Gallery preview</h2>
+      <p class="small">Instagram is the full gallery. Here are sample images to preview the style (replace with real IG images when available).</p>
+
+      <div class="gallery">
+        <img class="gImg" src="gallery_1.png" alt="Henna gallery 1" loading="lazy" />
+        <img class="gImg" src="gallery_2.png" alt="Henna gallery 2" loading="lazy" />
+        <img class="gImg" src="gallery_3.png" alt="Henna gallery 3" loading="lazy" />
+        <img class="gImg" src="gallery_4.png" alt="Henna gallery 4" loading="lazy" />
+        <img class="gImg" src="gallery_5.png" alt="Henna gallery 5" loading="lazy" />
+        <img class="gImg" src="gallery_6.png" alt="Henna gallery 6" loading="lazy" />
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn primary" href="https://www.instagram.com/henna_by_hiral?utm_source=qr" target="_blank" rel="noopener">View more here (Instagram)</a>
+        <a class="btn ghost" href="https://www.facebook.com/share/1Fkowwxo68/?mibextid=wwXIfr" target="_blank" rel="noopener">Order / message on Facebook</a>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="footRow">
+        <div>
+          <div style="font-weight:950;color:rgba(15,23,42,.92)">Henna by Hiral</div>
+          <div style="margin-top:6px">Calgary, AB</div>
+          <div style="margin-top:10px">Email: <b>hello@henna-by-hiral.ca</b> <span style="font-size:.86rem">(placeholder)</span></div>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#gallery" style="text-decoration:none;color:var(--muted2)">Gallery</a>
+          <a href="https://www.instagram.com/henna_by_hiral?utm_source=qr" target="_blank" rel="noopener" style="text-decoration:none;color:var(--muted2)">Instagram</a>
+          <a href="https://www.facebook.com/share/1Fkowwxo68/?mibextid=wwXIfr" target="_blank" rel="noopener" style="text-decoration:none;color:var(--muted2)">Facebook</a>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:.82rem">© <span id="y"></span> Henna by Hiral</div>
+    </section>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+    function smoothScrollTo(targetY, duration){
+      const startY = window.scrollY;
+      const diff = targetY - startY;
+      const start = performance.now();
+      function step(now){
+        const t = Math.min(1, (now - start) / duration);
+        const eased = easeOutCubic(t);
+        window.scrollTo(0, startY + diff * eased);
+        if(t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    document.getElementById('navGallery')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const el = document.getElementById('gallery');
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 90;
+      smoothScrollTo(y, 900);
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      for(const en of entries){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      }
+    }, { threshold: 0.14 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
